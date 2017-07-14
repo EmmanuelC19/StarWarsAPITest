@@ -1,0 +1,23 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - MPSkewed (0.9.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SVProgressHUD (2.1.2)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet
+  - MPSkewed
+  - SDWebImage
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  MPSkewed: 53d2f5ae0ce57c2ee475107cfb8899426f0b68fa
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+
+PODFILE CHECKSUM: e6d0c12fcf4e38829bfe0a7ccae163793bca8f50
+
+COCOAPODS: 1.2.1
