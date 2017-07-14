@@ -19,7 +19,7 @@ class PersonResponse: NSObject {
 		count = dictionary["count"] as? Int ?? 0
 		next = dictionary["next"] as? String ?? ""
 		previous = dictionary["previous"] as? String ?? ""
-		result = dictionary["result"] as? [Person] ?? []		
+		result = Utils.getArrayOfPersons(dictionary: dictionary["results"] as! [Dictionary<String, AnyObject>])
 	}
 	
 	

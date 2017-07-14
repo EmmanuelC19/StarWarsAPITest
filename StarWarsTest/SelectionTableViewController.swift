@@ -12,11 +12,12 @@ import SVProgressHUD
 class SelectionTableViewController: UITableViewController {
 	
 	var selection = ""
-	var dataSource = [String]()
+	var dataSource:[Person] = []
 	
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.addLogoToNavigationBar()
 		requestInfoForSelection()
 
     }
@@ -30,13 +31,23 @@ class SelectionTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dataSource.count
     }
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		let cell = tableView.dequeueReusableCell(withIdentifier: "selectionCell", for: indexPath)
+		let personInfo = dataSource[indexPath.row]
+		
+		cell.textLabel?.text = personInfo.name
+		
+		return cell
+	}
 	
 	func requestInfoForSelection(){
 		switch selection {
@@ -53,7 +64,10 @@ class SelectionTableViewController: UITableViewController {
 		SVProgressHUD.show(withStatus: "Obteniendo personajes...")
 		LibraryAPI.sharedInstance.getPeople(Success: { (response) in
 			SVProgressHUD.showSuccess(withStatus: "OK")
-			print(response)
+			self.dataSource = response.result
+			DispatchQueue.main.async {
+				self.tableView.reloadData()
+			}
 		}) { (error) in
 			SVProgressHUD.showError(withStatus: "Error")
 			print(error)
