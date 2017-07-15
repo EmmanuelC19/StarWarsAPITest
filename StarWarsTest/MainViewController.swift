@@ -48,7 +48,11 @@ class MainViewController: UIViewController,TGLParallaxCarouselDelegate {
 	}
 	
 	func carouselView(_ carouselView: TGLParallaxCarousel, didSelectItemAtIndex index: Int) {
-		selectedIndex = index
+		if isLaunching {
+			selectedIndex = 0
+		} else {
+			selectedIndex = index
+		}
 	}
 	
 	func carouselView(_ carouselView: TGLParallaxCarousel, willDisplayItem item: TGLParallaxCarouselItem, forIndex index: Int) {
@@ -61,7 +65,7 @@ class MainViewController: UIViewController,TGLParallaxCarouselDelegate {
 		var title = ""
 		switch index  {
 		case 0:
-			title = "Movies"
+			title = "Films"
 		case 1:
 			title = "People"
 		case 2:

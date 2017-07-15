@@ -8,19 +8,58 @@
 
 
 import Foundation
+import UIKit
 import SVProgressHUD
+
+enum section : String {
+	case movies = "Films"
+	case people = "People"
+	case planet = "Planet"
+	case starships = "Starships"
+	case vehicles = "Vehicles"
+	
+	var value: String {
+		return self.rawValue
+	}
+	
+}
 
 class LibraryAPI {
 	
 	static let sharedInstance = LibraryAPI()
 	
 	
-	func getPeople(Success onSuccess:@escaping (PersonResponse) -> (), onError:@escaping (String) -> ()) {
+
+	
+	
+	func getInfoFor(section: section, index: Int?, Success onSuccess:@escaping (Any) -> (), onError:@escaping (String) -> ()) {
 		
-		HTTPClient.sharedInstance.doRequest(method: "people/", type: "GET", parameters: [:], onSuccess: { (data) in
+		var method = (section.rawValue + "/").lowercased()
+		
+		if (index != nil) {
+			method = (section.rawValue + "/" + String(describing: index) + "/").lowercased()
+		}
+		
+		
+		HTTPClient.sharedInstance.doRequest(method: method, type: "GET", parameters: [:], onSuccess: { (data) in
 			if let serviceResponse = data as? Dictionary<String, AnyObject> {
-				let response = PersonResponse(dictionary: serviceResponse)
-				onSuccess(response)
+				switch section {
+				case .movies:
+					let response = MovieResponse(dictionary: serviceResponse)
+					onSuccess(response)
+				case .people:
+					let response = PersonResponse(dictionary: serviceResponse)
+					onSuccess(response)
+				case .planet:
+					let response = PersonResponse(dictionary: serviceResponse)
+					onSuccess(response)
+				case .starships:
+					let response = PersonResponse(dictionary: serviceResponse)
+					onSuccess(response)
+				case .vehicles:
+					let response = PersonResponse(dictionary: serviceResponse)
+					onSuccess(response)
+				}
 
 			} else {
 				onError("Error al serializar elemento.")
@@ -30,6 +69,5 @@ class LibraryAPI {
 			onError(error.description)
 		})
 	}
-	
 	
 }

@@ -22,5 +22,16 @@ public class Utils {
 		return personsArray
 	}
 	
+	class func getArrayOfMovies (dictionary : [Dictionary<String, AnyObject>]) -> [Movie] {
+		var personsArray : [Movie] = []
+		var person : Movie
+		for element in dictionary {
+			person = Movie(dictionary: element)
+			personsArray.append(person)
+		}
+		
+		return personsArray
+	}
+	
 
 }
