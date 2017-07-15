@@ -17,6 +17,10 @@ extension UIViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.image = logo
         self.navigationItem.titleView = imageView
-        
+		
+		self.navigationController?.navigationBar.isTranslucent = false
+		self.navigationController?.navigationBar.barTintColor = UIColor.black
+		self.navigationController?.navigationBar.tintColor = UIColor.white
+		
     }
 }

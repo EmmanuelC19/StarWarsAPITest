@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Rc2-td-jEM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KTd-Zh-t9t">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Starjout.ttf">
+            <string>StarJediOutline</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main Collection View Controller-->
         <scene sceneID="7h9-iQ-8fa">
@@ -56,13 +61,70 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="dM6-8z-ngZ"/>
-                    <connections>
-                        <segue destination="aps-OT-TDS" kind="show" identifier="gotoSelectedSection" id="NQB-Ig-l9a"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLD-p8-Xy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3722.4000000000001" y="217.24137931034485"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="sVf-SW-jrT">
+            <objects>
+                <viewController id="w8B-Rr-lpN" customClass="MainViewController" customModule="StarWarsTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WMB-cc-gWl"/>
+                        <viewControllerLayoutGuide type="bottom" id="VkB-gn-wZ5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Gb-HM-3LC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-background" translatesAutoresizingMaskIntoConstraints="NO" id="Vdi-2R-owr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDC-we-kJs" customClass="TGLParallaxCarousel" customModule="StarWarsTest" customModuleProvider="target">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="fvy-48-LBZ"/>
+                                    <constraint firstAttribute="height" constant="128" id="jX4-aG-fGy"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm6-2U-Fya">
+                                <rect key="frame" x="132" y="617" width="111" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="hpm-zG-2Q0"/>
+                                    <constraint firstAttribute="width" constant="111" id="nWZ-b9-qGv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="17"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.98459311549999995" green="0.97266438320000004" blue="0.18390235999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickContinueButton:" destination="w8B-Rr-lpN" eventType="touchUpInside" id="8bG-W6-Xt3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="eDC-we-kJs" firstAttribute="centerY" secondItem="1Gb-HM-3LC" secondAttribute="centerY" id="NkX-XT-mjg"/>
+                            <constraint firstItem="Vdi-2R-owr" firstAttribute="leading" secondItem="1Gb-HM-3LC" secondAttribute="leading" id="TC6-VJ-Gvp"/>
+                            <constraint firstItem="VkB-gn-wZ5" firstAttribute="top" secondItem="Vdi-2R-owr" secondAttribute="bottom" id="WOt-Cu-3j1"/>
+                            <constraint firstItem="Vdi-2R-owr" firstAttribute="top" secondItem="1Gb-HM-3LC" secondAttribute="top" id="f5p-nt-eNJ"/>
+                            <constraint firstItem="VkB-gn-wZ5" firstAttribute="top" secondItem="sm6-2U-Fya" secondAttribute="bottom" constant="9" id="pHa-Ou-YgV"/>
+                            <constraint firstAttribute="trailing" secondItem="Vdi-2R-owr" secondAttribute="trailing" id="srY-Da-RJE"/>
+                            <constraint firstItem="sm6-2U-Fya" firstAttribute="centerX" secondItem="Vdi-2R-owr" secondAttribute="centerX" id="udK-xe-2hp"/>
+                            <constraint firstItem="eDC-we-kJs" firstAttribute="centerX" secondItem="1Gb-HM-3LC" secondAttribute="centerX" id="vbg-pz-YDX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BqR-wf-6wV"/>
+                    <connections>
+                        <outlet property="carousel" destination="eDC-we-kJs" id="tOl-As-NZn"/>
+                        <segue destination="aps-OT-TDS" kind="show" identifier="gotoSelectedSection" id="3TG-GB-giC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i63-VB-aM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4661.6000000000004" y="897.30134932533736"/>
         </scene>
         <!--Selection Table View Controller-->
         <scene sceneID="php-Hn-yDQ">
@@ -87,17 +149,18 @@
                             <outlet property="delegate" destination="aps-OT-TDS" id="vKi-Re-u9m"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="5MQ-Xc-LPm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIA-KT-8le" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4532" y="217"/>
+            <point key="canvasLocation" x="5462" y="897"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fd0-Pm-9xV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rc2-td-jEM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ReB-7v-jTE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ReB-7v-jTE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -110,5 +173,26 @@
             </objects>
             <point key="canvasLocation" x="2783.1999999999998" y="217.24137931034485"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sUc-39-fme">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KTd-Zh-t9t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HPv-Oe-7bs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w8B-Rr-lpN" kind="relationship" relationship="rootViewController" id="VBs-OG-T1G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RpG-Zj-7Fb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3720.8000000000002" y="897.30134932533736"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="space-background" width="1920" height="1080"/>
+    </resources>
 </document>

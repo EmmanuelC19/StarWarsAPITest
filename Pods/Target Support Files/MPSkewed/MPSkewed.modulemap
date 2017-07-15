@@ -1,6 +1,0 @@
-framework module MPSkewed {
-  umbrella header "MPSkewed-umbrella.h"
-
-  export *
-  module * { export * }
-}

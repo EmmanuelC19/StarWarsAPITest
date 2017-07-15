@@ -51,9 +51,9 @@ class SelectionTableViewController: UITableViewController {
 	
 	func requestInfoForSelection(){
 		switch selection {
-		case "Peliculas":
+		case "Movies":
 			getPeopleInfo()
-		case "Personajes":
+		case "People":
 			getPeopleInfo()
 		default:
 			break

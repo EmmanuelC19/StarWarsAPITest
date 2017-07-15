@@ -14,6 +14,12 @@
 		1459223F1F187CF800A6552D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459223E1F187CF800A6552D /* Person.swift */; };
 		145922411F18811E00A6552D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145922401F18811E00A6552D /* HTTPClient.swift */; };
 		145922441F1883C100A6552D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145922431F1883C100A6552D /* Utils.swift */; };
+		145922461F19AA2800A6552D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145922451F19AA2800A6552D /* MainViewController.swift */; };
+		145922511F19AE9700A6552D /* TGLParallaxCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1459224D1F19AE9700A6552D /* TGLParallaxCarousel.swift */; };
+		145922521F19AE9700A6552D /* TGLParallaxCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1459224E1F19AE9700A6552D /* TGLParallaxCarousel.xib */; };
+		145922551F19B06300A6552D /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145922531F19B06300A6552D /* CustomView.swift */; };
+		145922561F19B06300A6552D /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 145922541F19B06300A6552D /* CustomView.xib */; };
+		145922591F19BA2500A6552D /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 145922581F19BA2500A6552D /* Starjout.ttf */; };
 		14CA510B1F17F32700D20563 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CA510A1F17F32700D20563 /* AppDelegate.swift */; };
 		14CA51101F17F32700D20563 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CA510E1F17F32700D20563 /* Main.storyboard */; };
 		14CA51121F17F32700D20563 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CA51111F17F32700D20563 /* Assets.xcassets */; };
@@ -31,6 +37,12 @@
 		1459223E1F187CF800A6552D /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		145922401F18811E00A6552D /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		145922431F1883C100A6552D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		145922451F19AA2800A6552D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1459224D1F19AE9700A6552D /* TGLParallaxCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGLParallaxCarousel.swift; sourceTree = "<group>"; };
+		1459224E1F19AE9700A6552D /* TGLParallaxCarousel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGLParallaxCarousel.xib; sourceTree = "<group>"; };
+		145922531F19B06300A6552D /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		145922541F19B06300A6552D /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		145922581F19BA2500A6552D /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 		14CA51071F17F32600D20563 /* StarWarsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CA510A1F17F32700D20563 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CA510F1F17F32700D20563 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +103,41 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		145922471F19AE8800A6552D /* External Classes */ = {
+			isa = PBXGroup;
+			children = (
+				145922481F19AE9700A6552D /* TGLParallaxCarousel */,
+			);
+			name = "External Classes";
+			sourceTree = "<group>";
+		};
+		145922481F19AE9700A6552D /* TGLParallaxCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				1459224B1F19AE9700A6552D /* Classes */,
+			);
+			path = TGLParallaxCarousel;
+			sourceTree = "<group>";
+		};
+		1459224B1F19AE9700A6552D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				145922531F19B06300A6552D /* CustomView.swift */,
+				145922541F19B06300A6552D /* CustomView.xib */,
+				1459224D1F19AE9700A6552D /* TGLParallaxCarousel.swift */,
+				1459224E1F19AE9700A6552D /* TGLParallaxCarousel.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		145922571F19BA0A00A6552D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				145922581F19BA2500A6552D /* Starjout.ttf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		14CA50FE1F17F32600D20563 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +159,8 @@
 		14CA51091F17F32600D20563 /* StarWarsTest */ = {
 			isa = PBXGroup;
 			children = (
+				145922571F19BA0A00A6552D /* Supporting Files */,
+				145922471F19AE8800A6552D /* External Classes */,
 				1459223B1F187C3400A6552D /* Model */,
 				145922311F1876CC00A6552D /* Conection Manager */,
 				14CA51211F18123900D20563 /* Extensions */,
@@ -131,6 +180,7 @@
 			children = (
 				14CA511F1F18077500D20563 /* MainCollectionViewController.swift */,
 				145922391F18791500A6552D /* SelectionTableViewController.swift */,
+				145922451F19AA2800A6552D /* MainViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -217,7 +267,10 @@
 			files = (
 				14CA51151F17F32700D20563 /* LaunchScreen.storyboard in Resources */,
 				14CA51121F17F32700D20563 /* Assets.xcassets in Resources */,
+				145922521F19AE9700A6552D /* TGLParallaxCarousel.xib in Resources */,
 				14CA51101F17F32700D20563 /* Main.storyboard in Resources */,
+				145922591F19BA2500A6552D /* Starjout.ttf in Resources */,
+				145922561F19B06300A6552D /* CustomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BAD1762B1941DBEE8FF71ACC /* [CP] Copy Pods Resources */ = {
@@ -277,10 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				145922381F1877B600A6552D /* LibraryApi.swift in Sources */,
+				145922461F19AA2800A6552D /* MainViewController.swift in Sources */,
 				14CA510B1F17F32700D20563 /* AppDelegate.swift in Sources */,
 				14CA51201F18077500D20563 /* MainCollectionViewController.swift in Sources */,
 				145922331F1876F500A6552D /* Reachability.swift in Sources */,
 				1459223D1F187C5300A6552D /* PersonResponse.swift in Sources */,
+				145922551F19B06300A6552D /* CustomView.swift in Sources */,
+				145922511F19AE9700A6552D /* TGLParallaxCarousel.swift in Sources */,
 				145922441F1883C100A6552D /* Utils.swift in Sources */,
 				145922411F18811E00A6552D /* HTTPClient.swift in Sources */,
 				1459223F1F187CF800A6552D /* Person.swift in Sources */,

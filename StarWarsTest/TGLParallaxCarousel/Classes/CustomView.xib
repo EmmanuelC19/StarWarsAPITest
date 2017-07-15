@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Starjout.ttf">
+            <string>StarJediOutline</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="StarWarsTest" customModuleProvider="target">
+            <connections>
+                <outlet property="bacgroundImage" destination="zth-9u-70E" id="Lp9-zS-fFG"/>
+                <outlet property="blurEffectView" destination="4LO-2e-1eL" id="uZX-Zj-FEK"/>
+                <outlet property="titleLabel" destination="49O-et-Xvt" id="8R0-MO-7Te"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="zth-9u-70E">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                </imageView>
+                <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LO-2e-1eL">
+                    <rect key="frame" x="21" y="38" width="259" height="75"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49O-et-Xvt">
+                            <rect key="frame" x="11" y="10" width="237" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="237" id="9jV-ah-yXH"/>
+                                <constraint firstAttribute="height" constant="54" id="TAN-rW-mKF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="StarJediOutline" family="Star Jedi Outline" pointSize="31"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <color key="shadowColor" red="0.98459311549999995" green="0.97266438320000004" blue="0.18390235999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="49O-et-Xvt" firstAttribute="centerX" secondItem="4LO-2e-1eL" secondAttribute="centerX" id="BDO-mX-2KV"/>
+                        <constraint firstAttribute="width" constant="259" id="bvz-qM-P9e"/>
+                        <constraint firstAttribute="height" constant="75" id="hJl-8o-hSv"/>
+                        <constraint firstItem="49O-et-Xvt" firstAttribute="centerY" secondItem="4LO-2e-1eL" secondAttribute="centerY" id="kDt-3T-bwq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="zth-9u-70E" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EbR-bJ-nUE"/>
+                <constraint firstAttribute="trailing" secondItem="zth-9u-70E" secondAttribute="trailing" id="TD2-Jz-wUl"/>
+                <constraint firstAttribute="bottom" secondItem="zth-9u-70E" secondAttribute="bottom" id="avn-on-mR9"/>
+                <constraint firstItem="4LO-2e-1eL" firstAttribute="centerX" secondItem="zth-9u-70E" secondAttribute="centerX" id="bJ0-7s-YUb"/>
+                <constraint firstItem="zth-9u-70E" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hST-bl-w7f"/>
+                <constraint firstItem="4LO-2e-1eL" firstAttribute="centerY" secondItem="zth-9u-70E" secondAttribute="centerY" id="oBH-DA-px8"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="default" width="163" height="93"/>
+    </resources>
+</document>

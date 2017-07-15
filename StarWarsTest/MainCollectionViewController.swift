@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MPSkewed
 import DZNEmptyDataSet
 import SVProgressHUD
 
@@ -61,7 +60,6 @@ class MainCollectionViewController: UICollectionViewController {
 	
 	override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
 		selectedIndex = indexPath
-		self.performSegue(withIdentifier: "gotoSelectedSection", sender: nil)
 	}
 	
 	
