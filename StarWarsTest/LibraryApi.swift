@@ -14,7 +14,7 @@ import SVProgressHUD
 enum section : String {
 	case movies = "Films"
 	case people = "People"
-	case planet = "Planet"
+	case planet = "Planets"
 	case starships = "Starships"
 	case vehicles = "Vehicles"
 	
@@ -51,10 +51,10 @@ class LibraryAPI {
 					let response = PersonResponse(dictionary: serviceResponse)
 					onSuccess(response)
 				case .planet:
-					let response = PersonResponse(dictionary: serviceResponse)
+					let response = PlanetResponse(dictionary: serviceResponse)
 					onSuccess(response)
 				case .starships:
-					let response = PersonResponse(dictionary: serviceResponse)
+					let response = StarshipResponse(dictionary: serviceResponse)
 					onSuccess(response)
 				case .vehicles:
 					let response = PersonResponse(dictionary: serviceResponse)

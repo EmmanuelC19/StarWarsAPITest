@@ -15,9 +15,9 @@ class SelectionTableViewController: UITableViewController,DZNEmptyDataSetSource,
 	var selection = ""
 	var dataSource:[Any] = []
 	
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		self.addLogoToNavigationBar()
 		refreshInfo()
 		
@@ -25,25 +25,25 @@ class SelectionTableViewController: UITableViewController,DZNEmptyDataSetSource,
 		self.tableView.emptyDataSetDelegate = self
 		self.tableView.rowHeight = UITableViewAutomaticDimension;
 		tableView.tableFooterView = UIView()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return dataSource.count
-    }
+		
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+	
+	// MARK: - Table view data source
+	
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		// #warning Incomplete implementation, return the number of sections
+		return 1
+	}
+	
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		// #warning Incomplete implementation, return the number of rows
+		return dataSource.count
+	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
@@ -73,8 +73,36 @@ class SelectionTableViewController: UITableViewController,DZNEmptyDataSetSource,
 			cell.birthYear.text = "birth year: " + personInfo.birth_year
 			cell.gender.text = "gender: " + personInfo.gender
 			
+			return cell
+			
+		case "Planets" :
+			let cell = tableView.dequeueReusableCell(withIdentifier: "planetCell", for: indexPath) as! PlanetCell
+			let planetInfo = dataSource[indexPath.row] as! Planet
+			
+			cell.name.text  = planetInfo.name
+			cell.rotation.text = "rotation: " + planetInfo.rotation_period
+			cell.orbitalPeriod.text = "orbital period:" + planetInfo.orbital_period
+			cell.diameter.text = "diameter: " + planetInfo.diameter
+			cell.gravity.text = "gracity: " + planetInfo.gravity
+			cell.terrain.text = "terrain: " + planetInfo.terrain
+			cell.population.text = "population: " + planetInfo.population
 			
 			return cell
+			
+		case "Starships" :
+			let cell = tableView.dequeueReusableCell(withIdentifier: "starshipsCell", for: indexPath) as! StarshipsCell
+			let starshipInfo = dataSource[indexPath.row] as! Starship
+			
+			cell.name.text  = starshipInfo.name
+			cell.model.text = "model: " + starshipInfo.model
+			cell.manufacturer.text = "manufacturer: " + starshipInfo.manufacturer
+			cell.cost.text = "cost: " + starshipInfo.cost_in_credits
+			cell.length.text = "length: " + starshipInfo.length
+			cell.atmosphering.text = "max atmosphering speed: " + starshipInfo.max_atmosphering_speed
+			cell.crew.text = "crew: " + starshipInfo.crew
+			cell.passengers.text = "passengers: " + starshipInfo.passengers
+			return cell
+			
 		default:
 			let cell = tableView.dequeueReusableCell(withIdentifier: "selectionCell", for: indexPath) as! PeopleCell
 			return cell
@@ -83,7 +111,18 @@ class SelectionTableViewController: UITableViewController,DZNEmptyDataSetSource,
 	
 	
 	override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return 200
+		switch selection {
+		case "Films":
+			return 200
+		case "People":
+			return 180
+		case "Planets":
+			return  250
+		case "Starships":
+			return 250
+		default:
+			return 200
+		}
 	}
 	
 	func refreshInfo(){
@@ -100,14 +139,21 @@ class SelectionTableViewController: UITableViewController,DZNEmptyDataSetSource,
 				let result = (response as AnyObject) as! PersonResponse
 				self.dataSource = result.result
 				break
+			case "Planets":
+				let result = (response as AnyObject) as! PlanetResponse
+				self.dataSource = result.result
+				break
+			case "Starships":
+				let result = (response as AnyObject) as! StarshipResponse
+				self.dataSource = result.result
 			default:
 				break
 			}
-
+			
 			DispatchQueue.main.async {
 				self.tableView.reloadData()
 			}
-
+			
 		}) { (error) in
 			SVProgressHUD.showError(withStatus: "Error")
 			print(error)
@@ -137,13 +183,13 @@ class SelectionTableViewController: UITableViewController,DZNEmptyDataSetSource,
 		return attrString
 	}
 	
-//	func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> UIImage! {
-//		return self.getImageWithColor(color: GlobalConstants.kColor_Red_Coca, size: CGSize(width: 300, height: 50))
-//	}
+	//	func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView!, for state: UIControlState) -> UIImage! {
+	//		return self.getImageWithColor(color: GlobalConstants.kColor_Red_Coca, size: CGSize(width: 300, height: 50))
+	//	}
 	
 	func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
 		//getHistoryInfo()
 	}
-
-
+	
+	
 }

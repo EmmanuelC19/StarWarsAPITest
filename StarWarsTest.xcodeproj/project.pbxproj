@@ -29,6 +29,14 @@
 		14D25F3A1F19DFD80079C90B /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F391F19DFD80079C90B /* MovieResponse.swift */; };
 		14D25F3C1F19E0BF0079C90B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F3B1F19E0BF0079C90B /* Movie.swift */; };
 		14D25F3F1F19E3DF0079C90B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F3E1F19E3DF0079C90B /* MovieTableViewCell.swift */; };
+		14D25F411F1AA6280079C90B /* PlanetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F401F1AA6280079C90B /* PlanetResponse.swift */; };
+		14D25F431F1AA6490079C90B /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F421F1AA6490079C90B /* Planet.swift */; };
+		14D25F451F1ADC9D0079C90B /* StarshipResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F441F1ADC9D0079C90B /* StarshipResponse.swift */; };
+		14D25F471F1ADCAB0079C90B /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F461F1ADCAB0079C90B /* Starship.swift */; };
+		14D25F491F1ADD6E0079C90B /* PlanetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F481F1ADD6E0079C90B /* PlanetCell.swift */; };
+		14D25F4B1F1AE5D10079C90B /* StarshipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F4A1F1AE5D10079C90B /* StarshipsCell.swift */; };
+		14D25F4D1F1AE9F00079C90B /* VehicleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F4C1F1AE9F00079C90B /* VehicleResponse.swift */; };
+		14D25F4F1F1AE9FF0079C90B /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D25F4E1F1AE9FF0079C90B /* Vehicle.swift */; };
 		913881A7BDDB120D7BB755BA /* Pods_StarWarsTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861BF82AA045F3620B9564D5 /* Pods_StarWarsTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +65,14 @@
 		14D25F391F19DFD80079C90B /* MovieResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		14D25F3B1F19E0BF0079C90B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		14D25F3E1F19E3DF0079C90B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		14D25F401F1AA6280079C90B /* PlanetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetResponse.swift; sourceTree = "<group>"; };
+		14D25F421F1AA6490079C90B /* Planet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		14D25F441F1ADC9D0079C90B /* StarshipResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipResponse.swift; sourceTree = "<group>"; };
+		14D25F461F1ADCAB0079C90B /* Starship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		14D25F481F1ADD6E0079C90B /* PlanetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetCell.swift; sourceTree = "<group>"; };
+		14D25F4A1F1AE5D10079C90B /* StarshipsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarshipsCell.swift; sourceTree = "<group>"; };
+		14D25F4C1F1AE9F00079C90B /* VehicleResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleResponse.swift; sourceTree = "<group>"; };
+		14D25F4E1F1AE9FF0079C90B /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		861BF82AA045F3620B9564D5 /* Pods_StarWarsTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6A9225396ABC34012882B1D /* Pods-StarWarsTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsTest/Pods-StarWarsTest.debug.xcconfig"; sourceTree = "<group>"; };
 		C7EB79FE17636AFD8823C482 /* Pods-StarWarsTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarWarsTest/Pods-StarWarsTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +115,12 @@
 				1459223E1F187CF800A6552D /* Person.swift */,
 				14D25F391F19DFD80079C90B /* MovieResponse.swift */,
 				14D25F3B1F19E0BF0079C90B /* Movie.swift */,
+				14D25F401F1AA6280079C90B /* PlanetResponse.swift */,
+				14D25F421F1AA6490079C90B /* Planet.swift */,
+				14D25F441F1ADC9D0079C90B /* StarshipResponse.swift */,
+				14D25F461F1ADCAB0079C90B /* Starship.swift */,
+				14D25F4C1F1AE9F00079C90B /* VehicleResponse.swift */,
+				14D25F4E1F1AE9FF0079C90B /* Vehicle.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -230,6 +252,8 @@
 			children = (
 				14D25F371F19CF8A0079C90B /* PeopleCell.swift */,
 				14D25F3E1F19E3DF0079C90B /* MovieTableViewCell.swift */,
+				14D25F481F1ADD6E0079C90B /* PlanetCell.swift */,
+				14D25F4A1F1AE5D10079C90B /* StarshipsCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -370,19 +394,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D25F4F1F1AE9FF0079C90B /* Vehicle.swift in Sources */,
+				14D25F411F1AA6280079C90B /* PlanetResponse.swift in Sources */,
 				145922381F1877B600A6552D /* LibraryApi.swift in Sources */,
 				145922461F19AA2800A6552D /* MainViewController.swift in Sources */,
+				14D25F4B1F1AE5D10079C90B /* StarshipsCell.swift in Sources */,
+				14D25F431F1AA6490079C90B /* Planet.swift in Sources */,
 				14D25F381F19CF8A0079C90B /* PeopleCell.swift in Sources */,
 				14CA510B1F17F32700D20563 /* AppDelegate.swift in Sources */,
+				14D25F491F1ADD6E0079C90B /* PlanetCell.swift in Sources */,
+				14D25F4D1F1AE9F00079C90B /* VehicleResponse.swift in Sources */,
 				145922331F1876F500A6552D /* Reachability.swift in Sources */,
 				1459223D1F187C5300A6552D /* PersonResponse.swift in Sources */,
 				14D25F3F1F19E3DF0079C90B /* MovieTableViewCell.swift in Sources */,
 				145922551F19B06300A6552D /* CustomView.swift in Sources */,
 				14D25F3A1F19DFD80079C90B /* MovieResponse.swift in Sources */,
+				14D25F471F1ADCAB0079C90B /* Starship.swift in Sources */,
 				145922511F19AE9700A6552D /* TGLParallaxCarousel.swift in Sources */,
 				145922441F1883C100A6552D /* Utils.swift in Sources */,
 				145922411F18811E00A6552D /* HTTPClient.swift in Sources */,
 				1459223F1F187CF800A6552D /* Person.swift in Sources */,
+				14D25F451F1ADC9D0079C90B /* StarshipResponse.swift in Sources */,
 				14CA51231F1812A000D20563 /* UIViewController+CustomizationNav.swift in Sources */,
 				1459223A1F18791500A6552D /* SelectionTableViewController.swift in Sources */,
 				14D25F3C1F19E0BF0079C90B /* Movie.swift in Sources */,

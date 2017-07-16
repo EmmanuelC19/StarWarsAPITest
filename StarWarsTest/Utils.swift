@@ -23,14 +23,47 @@ public class Utils {
 	}
 	
 	class func getArrayOfMovies (dictionary : [Dictionary<String, AnyObject>]) -> [Movie] {
-		var personsArray : [Movie] = []
-		var person : Movie
+		var movieArray : [Movie] = []
+		var movie : Movie
 		for element in dictionary {
-			person = Movie(dictionary: element)
-			personsArray.append(person)
+			movie = Movie(dictionary: element)
+			movieArray.append(movie)
 		}
 		
-		return personsArray
+		return movieArray
+	}
+	
+	class func getArrayOfPlanets (dictionary : [Dictionary<String, AnyObject>]) -> [Planet] {
+		var planetArray : [Planet] = []
+		var planet : Planet
+		for element in dictionary {
+			planet = Planet(dictionary: element)
+			planetArray.append(planet)
+		}
+		
+		return planetArray
+	}
+	
+	class func getArrayOfStarships (dictionary : [Dictionary<String, AnyObject>]) -> [Starship] {
+		var starshipArray : [Starship] = []
+		var starship : Starship
+		for element in dictionary {
+			starship = Starship(dictionary: element)
+			starshipArray.append(starship)
+		}
+		
+		return starshipArray
+	}
+	
+	class func getArrayOfVehicles (dictionary : [Dictionary<String, AnyObject>]) -> [Vehicle] {
+		var vehicleipArray : [Vehicle] = []
+		var vehicle : Vehicle
+		for element in dictionary {
+			vehicle = Vehicle(dictionary: element)
+			vehicleipArray.append(vehicle)
+		}
+		
+		return vehicleipArray
 	}
 	
 
